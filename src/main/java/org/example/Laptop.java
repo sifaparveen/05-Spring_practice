@@ -1,8 +1,9 @@
 package org.example;
 
-public class Laptop {
+public class Laptop implements Computer {
 
-    public void code() {
-        System.out.println("I am laptop");
+    @Override
+    public void compile() {
+        System.out.println("Working on laptop");
     }
 }

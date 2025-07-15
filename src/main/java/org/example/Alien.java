@@ -3,16 +3,16 @@ package org.example;
 public class Alien {
 
     private int age;
-    private Laptop lap;
+    private Computer comp;
 
-    public Alien(int age, Laptop lap) {
+    public Alien(int age, Computer comp) {
         this.age = age;
-        this.lap = lap;
+        this.comp = comp;
     }
 
     public void message() {
         System.out.println(age);
-        lap.code();
+        comp.compile();
     }
 
     public int getAge() {
@@ -23,12 +23,11 @@ public class Alien {
         this.age = age;
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getComp() {
+        return comp;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
-
+    public void setComp(Computer comp) {
+        this.comp = comp;
     }
 }
