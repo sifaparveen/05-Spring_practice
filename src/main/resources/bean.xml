@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="alien" class="org.example.Alien">
+
+<!--        //setter injection by value (primary value)-->
+<!--        <property name="age" value="2000" />-->
+<!--        //setter injection by refrence (refrence value)-->
+<!--        <property name="lap" ref="lap1"/>-->
+
+
+        <constructor-arg index="1" ref="lap1"  />
+        <constructor-arg index="0" value="2000"/>
+
+
+    </bean>
+
+    <bean id="lap1" class="org.example.Laptop">
+    </bean>
+
+</beans>
