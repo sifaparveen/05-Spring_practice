@@ -5,10 +5,10 @@ public class Alien {
     private int age;
     private Computer comp;
 
-    public Alien(int age, Computer comp) {
-        this.age = age;
-        this.comp = comp;
-    }
+//    public Alien(int age, Computer comp) {
+//        this.age = age;
+//        this.comp = comp;
+//    }
 
     public void message() {
         System.out.println(age);

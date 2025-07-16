@@ -6,7 +6,7 @@
 
     <!-- bean definitions here -->
 
-    <bean id="alien" class="org.example.Alien">
+    <bean id="alien" class="org.example.Alien" autowire="byType">
 
 <!--        //setter injection by value (primary value)-->
 <!--        <property name="age" value="2000" />-->
@@ -14,11 +14,11 @@
 <!--        <property name="lap" ref="lap1"/>-->
 
 
-        <constructor-arg index="1" ref="lap1"  />
-        <constructor-arg index="0" value="2000"/>
+<!--        <constructor-arg index="1" ref="lap1"  />-->
+<!--        <constructor-arg index="0" value="2000"/>-->
     </bean>
 
-    <bean id="lap1" class="org.example.Laptop">
+    <bean id="comp" class="org.example.Laptop" primary="true">
     </bean>
 
     <bean id="desktop" class="org.example.Desktop">
