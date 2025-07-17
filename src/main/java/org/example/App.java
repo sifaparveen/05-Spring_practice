@@ -11,8 +11,10 @@ public class App
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
 
-            Alien obj = (Alien) context.getBean("alien");
+            Alien obj = context.getBean("alien", Alien.class);
+            Computer comp = context.getBean(Laptop.class);
             obj.message();
+            comp.compile();
     }
 }
 
