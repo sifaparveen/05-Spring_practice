@@ -24,4 +24,6 @@
     <bean id="desktop" class="org.example.Desktop" lazy-init="true" primary="true">
     </bean>
 
+    <bean></bean>
+
 </beans>
