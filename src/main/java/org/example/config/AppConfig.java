@@ -1,8 +1,14 @@
 package org.example.config;
 
+import org.example.Alien;
+import org.example.Computer;
 import org.example.Desktop;
+import org.example.Laptop;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
@@ -12,10 +18,23 @@ public class AppConfig {
     public Desktop singletonDesktop() {
         return new Desktop();
     }
+//
+//    @Bean( name = "com2")
+//    @Scope("prototype")
+//    public Desktop protypeDesktop() {
+//        return new Desktop();
+//    }
+
 
     @Bean( name = "com2")
-    @Scope("prototype")
-    public Desktop protypeDesktop() {
-        return new Desktop();
+    public Laptop laptop() {
+        return new Laptop();
+    }
+
+    @Bean
+    public Alien alien( Computer comp) {
+        Alien obj = new Alien();
+        obj.setComp(comp);
+        return obj;
     }
 }
